@@ -6,7 +6,10 @@
 #include <Arduino.h>
 
 #include <ESP8266WiFi.h>
-#include <WiFiClient.h> // клиент, который может соединяться с указанным IP-адресом через определенный порт 
+/**
+ *  клиент, который может соединяться с указанным IP-адресом через определенный порт 
+ * */
+#include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 /**
  * веб-сервер, который знает, как обрабатывать HTTP-запросы, такие как GET и POST, 
@@ -14,10 +17,44 @@
  */
 #include <WebSocketsServer.h>
 
+// глобальные переменные
+String ssid = "Tenda_99";
+String password = "0984881136";
+
+IPAddress ip(192, 168, 0, 157);
+
+ESP8266WebServer server(80);
+WebSocketsServer socket = WebSocketsServer(81);
+
 void setup() {
-  // put your setup code here, to run once:
+	
+	WiFi.begin(ssid, password);
+
+	Serial.begin(115200);
+	delay(100);
+
+	// ожидание подключения
+	while(WiFi.status() != WL_CONNECTED) {
+		delay(500);
+		Serial.print(".");
+	}
+
+	// вывод информации о подключении к WiFi
+	Serial.println("");
+	Serial.println("IP address: ");
+	Serial.println(WiFi.localIP());
+
+	server.begin(); // старт сервера
+	socket.begin(); // старт сокета
+
+	delay(200);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+	server.handleClient();
+	delay(1);
+	socket.loop();
+	socket.broadcastTXT("hello");
+	delay(1000);
 }
