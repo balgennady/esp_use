@@ -1,4 +1,4 @@
-/* To compile using make CLI, create a folder under \firmware\user\applications and copy application.cpp there.
+/** To compile using make CLI, create a folder under \firmware\user\applications and copy application.cpp there.
 *  Then, copy src files under particleWebSocket folder.
 */
 
