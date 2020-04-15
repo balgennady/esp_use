@@ -1,9 +1,8 @@
+Этот каталог предназначен для конкретных (частных) библиотек.
+PlatformIO скомпилирует их в статические библиотеки и создаст ссылку на исполняемый файл.
 
-This directory is intended for project specific (private) libraries.
-PlatformIO will compile them to static libraries and link into executable file.
-
-The source code of each library should be placed in a an own separate directory
-("lib/your_library_name/[here are source files]").
+Исходный код каждой библиотеки должен быть помещен в отдельный каталог 
+(«lib / your_library_name / [здесь исходные файлы]»).
 
 For example, see a structure of the following two libraries `Foo` and `Bar`:
 
@@ -39,8 +38,7 @@ int main (void)
 
 ```
 
-PlatformIO Library Dependency Finder will find automatically dependent
-libraries scanning project source files.
+PlatformIO Library Dependency Finder найдет автоматически зависимые библиотеки, сканирующие исходные файлы проекта.
 
 More information about PlatformIO Library Dependency Finder
 - https://docs.platformio.org/page/librarymanager/ldf.html
