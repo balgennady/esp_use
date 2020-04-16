@@ -1,9 +1,11 @@
 var Socket;
+
 function init() {
     Socket = new WebSocket('ws://' + window.location.hostname + ':81/');
 }
 
 document.getElementById('BTN_LED').addEventListener('click', buttonClicked);
+
 function buttonClicked() {
     var btn = document.getElementById('BTN_LED')
     var btnText = btn.textContent || btn.innerText;
