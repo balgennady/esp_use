@@ -8,7 +8,7 @@
 #include <ESP8266WiFi.h>
 /**
  *  клиент, который может соединяться с указанным IP-адресом через определенный порт 
- * */
+ **/
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 /**
