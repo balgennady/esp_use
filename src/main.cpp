@@ -1,7 +1,6 @@
 #include <Arduino.h>
 
 String header = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n";
-
 String html_1 = R"=====(
 	<!DOCTYPE html>
 	<html>
@@ -53,7 +52,7 @@ String html_1 = R"=====(
 	}
 	</script>
 	</html>
-	)=====";
+)=====";
 
 #include <ESP8266WiFi.h>
 #include <WebSocketsServer.h>
