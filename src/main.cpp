@@ -58,14 +58,17 @@ String html_1 = R"=====(
 #include <ESP8266WiFi.h>
 #include <WebSocketsServer.h>
 
+void webSocketEvent(byte num, WStype_t type, uint8_t *payload, size_t length);
+
 WiFiServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
 
-// byte pin_led = D2;
-byte pin_led = BUILTIN_LED;
+// byte pin_led = 2;
+// byte pin_led = BUILTIN_LED;
+byte pin_led = LED_BUILTIN;
 
 char ssid[] = "Tenda_99";
-char pass[] = "0984881148";
+char pass[] = "0984881136";
 
 void setup() {
 
