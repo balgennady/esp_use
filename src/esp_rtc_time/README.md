@@ -7,8 +7,5 @@
 * Плата NodeMcu v3
 * 0.96" I2C OLED Display
 
-![1]("img/Простые часы на ESp8266-1.jpg")
+![1](img/ESp8266(1).jpg)
 
-```
-img/Простые часы на ESp8266-1.jpg
-```
