@@ -1,7 +1,7 @@
-# ESp8266 time Oled display
+# ESp8266 clock with Oled display
 
 ## Описание
-Простые часы на ESp8266 +Oled display 
+Простые часы на ESp8266 + Oled display 
  
 Для сборки потребуется : 
 * Плата NodeMcu v3
