@@ -1,5 +1,5 @@
 /**
- * Простые часы на ESp8266 +Oled display 
+ * Простые часы на ESp8266 + Oled display 
  *
  * Для сборки потребуется : 
  * Плата NodeMcu v3 http://ali.pub/54jmzl
@@ -118,7 +118,8 @@ void loop() {
     display.print(":"); 
     
     if ( p_tm->tm_min <10 ) 
-        display.print("0"); 
+        display.print("0");
+
     display.print(p_tm->tm_min); 
     
     display.setTextSize(2); 
